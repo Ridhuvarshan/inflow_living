@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Inflow Living</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #F8F5EF; color: #38302A; }
+    .font-serif-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-[#D5DDD2] selection:text-[#2A3728]">
+  <header class="relative z-30 w-full max-w-6xl mx-auto px-6 pt-6 pb-4">
+    <div class="flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 text-[#2E2620] tracking-tight">
+        <img src="media/logo.png" alt="Inflow Living Logo" class="h-9 sm:h-10 w-auto object-contain rounded-md hidden" onload="this.classList.remove('hidden'); document.getElementById('logo-fallback').classList.add('hidden')" onerror="this.remove()">
+        <span id="logo-fallback" class="w-3.5 h-3.5 rounded-full bg-[#647462]"></span>
+        <span class="font-serif-display text-2xl sm:text-3xl font-semibold tracking-wide">Inflow Living</span>
+      </a>
+      <button type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#E9E1D4] text-[#2E2620] lg:hidden">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+      <nav id="primary-navigation" class="absolute left-6 right-6 top-full z-30 mt-2 hidden flex-col gap-4 rounded-2xl border border-[#E9E1D4] bg-[#FCFAF6] p-5 text-xs uppercase tracking-widest font-medium text-[#685B50] shadow-lg lg:static lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-6 xl:gap-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:text-sm">
+        <a href="index.html" class="hover:text-[#2E2620] transition-colors">Home</a>
+        <a href="about-us.html" class="text-[#2E2620] font-semibold lg:border-b-2 lg:border-[#647462] lg:pb-0.5">About Us</a>
+        <a href="what-we-do.html" class="hover:text-[#2E2620] transition-colors">What We Do</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-3xl mx-auto w-full px-6 py-14 sm:py-20 lg:py-24">
+    <h1 class="font-serif-display text-4xl sm:text-5xl lg:text-6xl text-[#28221D] mb-8">About Inflow Living</h1>
+    <div class="space-y-6 text-base sm:text-lg text-[#584D44] leading-relaxed font-light">
+      <p>Inflow Living is built on the belief that a fulfilling life begins with understanding who we truly are. We believe in turning inward, healing what holds us back, and creating a life that feels authentic to us — in our work, relationships, choices, and everyday experiences.</p>
+      <p>Through emotional wellness, Bach Flower Therapy, Somatic therapies, creative experiences, and intentional spaces for self-discovery, we encourage people to put themselves at the centre of their lives.</p>
+      <p>We also believe that <strong class="font-semibold text-[#38302A]">women heal in connection with one another.</strong> When women come together, share their experiences, and feel seen and understood, healing becomes a shared journey. That's why we create spaces for women to connect beyond their roles and responsibilities, embrace who they are, and grow together.</p>
+      <p>At Inflow Living, we believe that when we begin with ourselves, we begin to change how we experience life.</p>
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto w-full px-6 py-8 border-t border-[#E5DECF] text-xs text-[#8A7C6E] flex flex-col sm:flex-row sm:justify-between gap-5 sm:items-center">
+    <span>© 2026 Inflow Living</span>
+    <div>
+      <p class="font-semibold uppercase tracking-[0.18em] text-[#685B50] mb-2">Quick Links</p>
+      <nav aria-label="Quick links" class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href="about-us.html" class="hover:text-[#2E2620]">About Us</a>
+        <a href="what-we-do.html" class="hover:text-[#2E2620]">What We Do</a>
+        <a href="index.html#testimonials" class="hover:text-[#2E2620]">Testimonials</a>
+        <a href="upcoming-events.html" class="hover:text-[#2E2620]">Upcoming Events</a>
+        <a href="mailto:inflow.livingg@gmail.com" class="hover:text-[#2E2620]">Contact Us</a>
+        <a href="terms-and-conditions.html" class="hover:text-[#2E2620]">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+  </footer>
+  <script>lucide.createIcons();</script>
+  <script src="media/site.js"></script>
+</body>
+</html>

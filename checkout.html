@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Inflow Living</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #F8F5EF; color: #38302A; }
+    .font-serif-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-[#D5DDD2] selection:text-[#2A3728]">
+  <header class="relative z-30 w-full max-w-6xl mx-auto px-6 pt-6 pb-4">
+    <div class="flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 text-[#2E2620] tracking-tight">
+        <img src="media/logo.png" alt="Inflow Living Logo" class="h-9 sm:h-10 w-auto object-contain rounded-md hidden" onload="this.classList.remove('hidden'); document.getElementById('logo-fallback').classList.add('hidden')" onerror="this.remove()">
+        <span id="logo-fallback" class="w-3.5 h-3.5 rounded-full bg-[#647462]"></span>
+        <span class="font-serif-display text-2xl sm:text-3xl font-semibold tracking-wide">Inflow Living</span>
+      </a>
+      <button type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#E9E1D4] text-[#2E2620] lg:hidden">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+      <nav id="primary-navigation" class="absolute left-6 right-6 top-full z-30 mt-2 hidden flex-col gap-4 rounded-2xl border border-[#E9E1D4] bg-[#FCFAF6] p-5 text-xs uppercase tracking-widest font-medium text-[#685B50] shadow-lg lg:static lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-6 xl:gap-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:text-sm">
+        <a href="index.html" class="hover:text-[#2E2620]">Home</a>
+        <a href="about-us.html" class="hover:text-[#2E2620]">About Us</a>
+        <a href="what-we-do.html" class="hover:text-[#2E2620]">What We Do</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-3xl mx-auto w-full px-6 pt-10 sm:pt-16 pb-20">
+    <a href="one-to-one.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#76695E] hover:text-[#28221D] mb-8">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>All 1:1 options
+    </a>
+    <section class="max-w-2xl">
+      <p class="text-xs uppercase tracking-[0.2em] text-[#647462] font-semibold mb-3">Secure payment</p>
+      <h1 class="font-serif-display text-5xl sm:text-6xl text-[#28221D] mb-8">Checkout</h1>
+      <div id="checkout-summary" class="rounded-2xl bg-[#F0EAE0] p-6 sm:p-8">
+        <p class="text-xs uppercase tracking-[0.16em] text-[#647462] font-semibold mb-2">Selected service</p>
+        <h2 id="plan-name" class="font-serif-display text-3xl sm:text-4xl text-[#28221D] mb-5">Choose a 1:1 service</h2>
+        <div class="flex items-end justify-between gap-4 border-t border-[#DCD4C8] pt-4">
+          <span class="text-sm text-[#6C5E53]">Total</span>
+          <span id="plan-price" class="font-serif-display text-3xl text-[#28221D]">Select a package</span>
+        </div>
+      </div>
+      <div class="mt-6 rounded-2xl border border-[#E5DECF] bg-[#FCFAF6] p-5 sm:p-6">
+        <p id="payment-status" class="text-sm text-[#584D44] leading-relaxed">Select a package from the 1:1 options page to continue.</p>
+        <a id="payment-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden mt-5 inline-flex items-center gap-2 bg-[#203F17] text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-[#294D1F]">
+          Continue to Instamojo
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+        <a id="email-fallback" href="mailto:inflow.livingg@gmail.com" class="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F]">
+          Ask about booking
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto w-full px-6 py-8 border-t border-[#E5DECF] text-xs text-[#8A7C6E] flex flex-wrap gap-4 justify-between">
+    <span>© 2026 Inflow Living</span>
+    <nav aria-label="Quick links" class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="one-to-one.html">All 1:1 options</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+    </nav>
+  </footer>
+
+  <script>
+    const plans = {
+      consultation: { name: '1:1 Flower Therapy Consultation', price: 'Rs. 1,999', subject: '1:1 Flower Therapy Consultation', paymentUrl: '' },
+      'three-month': { name: '3-Month Introductory Flower Therapy Support', price: 'Rs. 2,999', subject: '3-Month Flower Therapy Support', paymentUrl: '' },
+      'six-month': { name: '6-Month Extended Flower Therapy Support', price: 'Rs. 5,999', subject: '6-Month Flower Therapy Support', paymentUrl: '' },
+      'twelve-month': { name: '12-Month In-Depth Flower Therapy Support', price: 'Rs. 11,999', subject: '12-Month Flower Therapy Support', paymentUrl: '' }
+    };
+    const selectedPlan = plans[new URLSearchParams(window.location.search).get('plan')];
+    const status = document.getElementById('payment-status');
+    const paymentLink = document.getElementById('payment-link');
+    const emailFallback = document.getElementById('email-fallback');
+
+    if (selectedPlan) {
+      document.getElementById('plan-name').textContent = selectedPlan.name;
+      document.getElementById('plan-price').textContent = selectedPlan.price;
+      emailFallback.href = `mailto:inflow.livingg@gmail.com?subject=${encodeURIComponent(selectedPlan.subject)}`;
+
+      if (selectedPlan.paymentUrl) {
+        status.textContent = 'You will complete payment on Instamojo’s secure hosted checkout page.';
+        paymentLink.href = selectedPlan.paymentUrl;
+        paymentLink.classList.remove('hidden');
+        emailFallback.classList.add('hidden');
+      } else {
+        status.textContent = 'The Instamojo checkout link for this service has not been connected yet. You can email us to arrange your booking.';
+      }
+    } else {
+      status.textContent = 'Please choose one of the 1:1 services to see its checkout details.';
+    }
+
+    lucide.createIcons();
+  </script>
+  <script src="media/site.js"></script>
+</body>
+</html>

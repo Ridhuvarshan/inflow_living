@@ -27,7 +27,7 @@
 <body class="min-h-screen flex flex-col antialiased selection:bg-[#D5DDD2] selection:text-[#2A3728]">
 
   <!-- Top Navigation (Clean Open Header - No Oval Pill) -->
-  <header class="w-full max-w-6xl mx-auto px-6 pt-6 pb-4">
+  <header class="relative z-30 w-full max-w-6xl mx-auto px-6 pt-6 pb-4">
     <div class="flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 text-[#2E2620] tracking-tight group">
         <!-- Logo Image -->
@@ -35,288 +35,185 @@
         <span id="logo-fallback" class="w-3.5 h-3.5 rounded-full bg-[#647462]"></span>
         <span class="font-serif-display text-2xl sm:text-3xl font-semibold tracking-wide">Inflow Living</span>
       </a>
-      <nav class="flex items-center gap-6 sm:gap-8 text-xs sm:text-sm uppercase tracking-widest font-medium text-[#685B50]">
-        <a href="index.html" class="text-[#2E2620] font-semibold border-b-2 border-[#647462] pb-0.5">Home</a>
+      <button type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#E9E1D4] text-[#2E2620] lg:hidden">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+      <nav id="primary-navigation" class="absolute left-6 right-6 top-full z-30 mt-2 hidden flex-col gap-4 rounded-2xl border border-[#E9E1D4] bg-[#FCFAF6] p-5 text-xs uppercase tracking-widest font-medium text-[#685B50] shadow-lg lg:static lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-6 xl:gap-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:text-sm">
+        <a href="index.html" class="text-[#2E2620] font-semibold lg:border-b-2 lg:border-[#647462] lg:pb-0.5">Home</a>
+        <a href="about-us.html" class="hover:text-[#2E2620] transition-colors">About Us</a>
         <a href="what-we-do.html" class="hover:text-[#2E2620] transition-colors">What We Do</a>
-        <a href="testimonials.html" class="hover:text-[#2E2620] transition-colors">Testimonials</a>
-        <a href="#contact" class="bg-[#647462] text-[#F8F5EF] px-5 sm:px-6 py-2.5 rounded-full hover:bg-[#536151] transition shadow-sm font-semibold">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section: Split Editorial Layout (Text Left, Image Right) -->
-  <main class="flex-grow max-w-6xl mx-auto w-full px-6 pt-10 sm:pt-14 pb-20">
-    
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-      
-      <!-- Left Column: Copy & Single CTA -->
-      <div class="lg:col-span-6 flex flex-col justify-center">
+  <main class="flex-grow max-w-6xl mx-auto w-full px-6 pt-8 sm:pt-12 pb-16">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+      <div class="py-6 sm:py-10">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#647462] font-semibold mb-4">Inflow Living</p>
+        <h1 class="font-serif-display text-5xl sm:text-6xl lg:text-7xl font-normal text-[#28221D] leading-[0.98] mb-5">Come back to yourself.</h1>
+        <p class="text-[#584D44] text-base sm:text-lg leading-relaxed font-light mb-7">For people ready to feel more grounded, clear, and creatively alive.</p>
+        <a href="upcoming-events.html" class="inline-flex items-center gap-2.5 bg-[#2E2620] text-[#F8F5EF] px-7 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-[#433830] transition shadow-sm group">
+          Join a gathering
+          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+        </a>
+      </div>
+      <div class="relative h-[300px] sm:h-[420px] lg:h-[500px] overflow-hidden rounded-[2rem] bg-[#E3DCCF]">
+        <img src="media/martvili-canyons-georgia.jpg" alt="A quiet landscape for reflection" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80'">
+      </div>
+    </section>
 
-        <!-- Editorial Headline -->
-        <h1 class="font-serif-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#28221D] leading-[1.1] mb-6">
-          Where life flows with <span class="italic font-normal text-[#5A6C58]">intention, creativity</span>, and quiet calm.
-        </h1>
+    <section aria-label="Inflow Living by the numbers" class="mt-14 sm:mt-20 border-y border-[#E5DECF] py-6 sm:py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
+        <div><p class="font-serif-display text-3xl sm:text-4xl text-[#28221D]">60+</p><p class="mt-1 text-xs sm:text-sm text-[#6C5E53]">hours of 1:1 sessions across modalities</p></div>
+        <div><p class="font-serif-display text-3xl sm:text-4xl text-[#28221D]">2+</p><p class="mt-1 text-xs sm:text-sm text-[#6C5E53]">years guiding people</p></div>
+        <div><p class="font-serif-display text-3xl sm:text-4xl text-[#28221D]">11k+</p><p class="mt-1 text-xs sm:text-sm text-[#6C5E53]">Spotify streams on Your Voice</p></div>
+        <div><p class="font-serif-display text-3xl sm:text-4xl text-[#28221D]">6+</p><p class="mt-1 text-xs sm:text-sm text-[#6C5E53]">gatherings since May 2026</p></div>
+      </div>
+    </section>
 
-        <!-- Subtext / Story -->
-        <p class="text-[#584D44] text-base sm:text-lg leading-relaxed font-light mb-8 max-w-lg">
-          Inflow Living began with a simple observation: modern life constantly pulls us out of alignment with what actually nourishes us. We offer intentional spaces, grounding practices, and creative clarity designed to bring balance back into your day.
-        </p>
+    <section class="mt-16 sm:mt-24">
+      <div class="max-w-2xl mb-8">
+        <h2 class="font-serif-display text-4xl sm:text-5xl text-[#28221D]">Our approach</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+        <article class="rounded-2xl bg-[#F3EEE6] p-6 sm:p-7">
+          <h3 class="font-serif-display text-4xl sm:text-5xl text-[#28221D] mb-3">Body</h3>
+          <p class="text-sm text-[#584D44] leading-relaxed mb-5">Somatic practices and Bach flower support to release emotions and shift how you feel about yourself.</p>
+          <a href="what-we-do.html#peace" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F] hover:text-[#2E2620]">Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        </article>
+        <article class="rounded-2xl bg-[#E9EEE8] p-6 sm:p-7">
+          <h3 class="font-serif-display text-4xl sm:text-5xl text-[#28221D] mb-3">Mind</h3>
+          <p class="text-sm text-[#584D44] leading-relaxed mb-5">Mindset work and transformational coaching to move from stuck patterns to clear decisions.</p>
+          <a href="what-we-do.html#peace" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F] hover:text-[#2E2620]">Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        </article>
+        <article class="rounded-2xl bg-[#F4EAE5] p-6 sm:p-7">
+          <h3 class="font-serif-display text-4xl sm:text-5xl text-[#28221D] mb-3">Soul</h3>
+          <p class="text-sm text-[#584D44] leading-relaxed mb-5">Creative practice, journaling, art, and writing for intentional living and a more alive everyday.</p>
+          <a href="what-we-do.html#cohort" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F] hover:text-[#2E2620]">Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        </article>
+      </div>
+    </section>
 
-        <!-- Single CTA Linking to "What We Do" -->
+    <section class="mt-16 sm:mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
         <div>
-          <a href="what-we-do.html" class="inline-flex items-center gap-2.5 bg-[#2E2620] text-[#F8F5EF] px-7 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-[#433830] transition shadow-sm group">
-            Explore What We Do
-            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-          </a>
+          <h2 class="font-serif-display text-4xl sm:text-5xl text-[#28221D]">What we do</h2>
         </div>
+        <a href="what-we-do.html" class="text-xs uppercase tracking-widest font-semibold text-[#52634F] hover:text-[#2E2620]">All paths <i data-lucide="arrow-up-right" class="inline w-4 h-4"></i></a>
       </div>
-
-      <!-- Right Column: Rounded Hero Image & Floating Badge -->
-      <div class="lg:col-span-6">
-        <div class="relative w-full h-[460px] sm:h-[540px] rounded-[2.5rem] overflow-hidden border border-[#E3DCCF] shadow-sm bg-[#EFE9DF]">
-          
-          <!-- Floating Badge (Top Right) -->
-          <div class="absolute top-5 right-5 z-10 bg-white/90 backdrop-blur-md border border-[#E3DCCF] rounded-full py-1.5 px-3.5 flex items-center gap-2 shadow-sm">
-            <div class="flex -space-x-1.5">
-              <span class="w-5 h-5 rounded-full bg-[#CAD4C7] border border-white flex items-center justify-center text-[9px] text-[#4F5E4E] font-medium">✦</span>
-              <span class="w-5 h-5 rounded-full bg-[#647462] border border-white"></span>
-            </div>
-            <span class="text-xs font-medium text-[#2E2620] tracking-tight">Loved by 500+ members</span>
-          </div>
-
-          <!-- Hero Image -->
-          <!-- Save your stock image as hero.jpg inside the media/ folder -->
-          <img 
-            src="media/martvili-canyons-georgia.jpg"
-            alt="Mindful movement and creative living" 
-            class="w-full h-full object-cover object-center"
-            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80';"
-          />
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Stats & Impact Grid (Matches Attached Image) -->
-    <section class="mt-20 pt-2">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        
-        <!-- Stat Item 1 -->
-        <div class="bg-[#F4EFE6] border border-[#E9E1D4] rounded-[2rem] p-8 sm:p-9 flex flex-col justify-between transition-all hover:border-[#CAD4C7]">
-          <div>
-            <div class="font-serif-display text-5xl sm:text-6xl font-light text-[#28221D] tracking-tight mb-4">
-              18+
-            </div>
-            <p class="text-[#6C5E53] text-sm leading-relaxed font-light">
-              Weekly spaces across mindfulness, guided discussions, and reflective breathwork.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stat Item 2 -->
-        <div class="bg-[#F4EFE6] border border-[#E9E1D4] rounded-[2rem] p-8 sm:p-9 flex flex-col justify-between transition-all hover:border-[#CAD4C7]">
-          <div>
-            <div class="font-serif-display text-5xl sm:text-6xl font-light text-[#28221D] tracking-tight mb-4">
-              5+
-            </div>
-            <p class="text-[#6C5E53] text-sm leading-relaxed font-light">
-              Years dedicated to guiding intentional habit design and creative expression.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stat Item 3 -->
-        <div class="bg-[#F4EFE6] border border-[#E9E1D4] rounded-[2rem] p-8 sm:p-9 flex flex-col justify-between transition-all hover:border-[#CAD4C7]">
-          <div>
-            <div class="font-serif-display text-5xl sm:text-6xl font-light text-[#28221D] tracking-tight mb-4">
-              4.8
-            </div>
-            <p class="text-[#6C5E53] text-sm leading-relaxed font-light">
-              Community alignment rating from participants across our cohorts & sessions.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Meet Your Facilitator -->
-    <section class="mt-20 pt-4">
-      <div class="mb-6">
-        <h2 class="font-serif-display text-3xl sm:text-4xl text-[#28221D]">Meet your facilitator</h2>
-      </div>
-
-      <div class="overflow-hidden rounded-[2rem] border border-[#E9E1D4] bg-[#F4EFE6] shadow-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-[0.7fr_1.3fr] items-center">
-          <div class="relative min-h-[180px] sm:min-h-[220px] lg:min-h-[240px]">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
-              alt="Facilitator portrait"
-              class="h-full w-full object-cover"
-            />
-          </div>
-          <div class="flex flex-col justify-center p-4 sm:p-5 lg:p-6">
-            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#647462] mb-2">Facilitator</p>
-            <h2 class="font-serif-display text-2xl sm:text-3xl lg:text-4xl text-[#28221D] leading-[0.95] mb-2">Maya Hart</h2>
-            <p class="text-sm text-[#584D44] leading-relaxed max-w-xl">
-              Maya guides reflective practice, creative rhythm, and grounded community spaces that help people feel more at ease in their daily lives.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- What We Do -->
-    <section class="mt-20 pt-12">
-      <h2 class="font-serif-display text-3xl sm:text-4xl text-[#28221D] mb-8">What We Do</h2>
-
-      <div class="flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        
-        <!-- Card 1 -->
-        <div class="group min-w-[260px] sm:min-w-[300px] flex-1 snap-start overflow-hidden rounded-2xl border border-[#EBE4D8] bg-[#FCFAF6] shadow-sm hover:border-[#CAD4C7] transition-all">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="1:1 Sessions" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/25 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 p-5">
-              <h3 class="font-serif-display text-2xl text-white">1:1 Sessions</h3>
-            </div>
-          </div>
-          <p class="p-5 text-sm text-[#6C5E53] leading-relaxed">Personalized advisory sessions to explore alignment and see if our space is the right fit.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="group min-w-[260px] sm:min-w-[300px] flex-1 snap-start overflow-hidden rounded-2xl border border-[#EBE4D8] bg-[#FCFAF6] shadow-sm hover:border-[#CAD4C7] transition-all">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="The Art of Creative Living" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/25 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 p-5">
-              <h3 class="font-serif-display text-2xl text-white">The Art of Creative Living</h3>
-            </div>
-          </div>
-          <p class="p-5 text-sm text-[#6C5E53] leading-relaxed">An ongoing cohort helping you reclaim focus, unblock creative intuition, and build balance.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="group min-w-[260px] sm:min-w-[300px] flex-1 snap-start overflow-hidden rounded-2xl border border-[#EBE4D8] bg-[#FCFAF6] shadow-sm hover:border-[#CAD4C7] transition-all">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Communities" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/25 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 p-5">
-              <h3 class="font-serif-display text-2xl text-white">Communities</h3>
-            </div>
-          </div>
-          <p class="p-5 text-sm text-[#6C5E53] leading-relaxed">Dedicated WhatsApp spaces for mindful dialogue, habit sharing, and reflections.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="group min-w-[260px] sm:min-w-[300px] flex-1 snap-start overflow-hidden rounded-2xl border border-[#EBE4D8] bg-[#FCFAF6] shadow-sm hover:border-[#CAD4C7] transition-all">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Your Voice (Tamil Podcast)" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/25 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 p-5">
-              <h3 class="font-serif-display text-2xl text-white">Your Voice (Tamil Podcast)</h3>
-            </div>
-          </div>
-          <p class="p-5 text-sm text-[#6C5E53] leading-relaxed">Conversations exploring inner alignment, deliberate pacing, and creative flow.</p>
-        </div>
-
-      </div>
-
-      <div class="mt-8 text-center">
-        <a href="what-we-do.html" class="inline-flex items-center gap-2 bg-[#647462] text-[#F8F5EF] px-7 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-[#536151] transition">
-          View in detail
-          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      <div class="flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <a id="path-peace" href="one-to-one.html" class="group relative h-[300px] min-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-[#E3DCCF] sm:h-[340px] lg:min-w-0">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="One-to-one coaching session" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <span class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/20 to-transparent"></span>
+          <span class="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-white">
+            <span class="block font-serif-display text-2xl sm:text-3xl leading-tight">Work with me 1:1</span>
+            <span class="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold">Explore sessions <i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+          </span>
+        </a>
+        <article id="path-gatherings" class="relative h-[300px] min-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-[#E3DCCF] sm:h-[340px] lg:min-w-0">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="People gathering in community" class="absolute inset-0 h-full w-full object-cover">
+          <span class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/20 to-transparent"></span>
+          <span class="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-white">
+            <span class="block font-serif-display text-2xl sm:text-3xl leading-tight">Communities</span>
+          </span>
+        </article>
+        <article id="path-cohort" class="relative h-[300px] min-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-[#E3DCCF] sm:h-[340px] lg:min-w-0">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="A calm landscape for creative reflection" class="absolute inset-0 h-full w-full object-cover">
+          <span class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/20 to-transparent"></span>
+          <span class="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-white">
+            <span class="block font-serif-display text-2xl sm:text-3xl leading-tight">Cohorts</span>
+          </span>
+        </article>
+        <a id="path-podcast" href="https://open.spotify.com/show/2hyAKtEvTIF4kAFTQ9ptL2" target="_blank" rel="noopener noreferrer" class="group relative h-[300px] min-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-[#E3DCCF] sm:h-[340px] lg:min-w-0">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="A conversation around a table" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <span class="absolute inset-0 bg-gradient-to-t from-[#1F1A17]/85 via-[#1F1A17]/20 to-transparent"></span>
+          <span class="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-white">
+            <span class="block font-serif-display text-2xl sm:text-3xl leading-tight">Your Voice</span>
+            <span class="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold">Tamil podcast <i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+          </span>
         </a>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="mt-20 pt-4">
-      <div class="mb-8">
-        <span class="text-xs font-semibold uppercase tracking-widest text-[#647462]">Kind words</span>
-        <h2 class="font-serif-display text-3xl sm:text-4xl text-[#28221D] mt-2">Testimonials</h2>
+    <section class="mt-16 sm:mt-24">
+      <div class="mb-7">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#647462] font-semibold mb-3">Meet your facilitator</p>
+        <h2 class="font-serif-display text-4xl sm:text-5xl text-[#28221D]">A thoughtful space, held with care.</h2>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-        <div class="rounded-[1.75rem] border border-[#E9E1D4] bg-[#F4EFE6] p-5 h-[220px] flex flex-col justify-between">
-          <div class="text-[#647462] text-[10px] uppercase tracking-[0.2em] font-semibold">Member reflection</div>
-          <blockquote class="font-serif-display text-2xl sm:text-3xl leading-[1.05] text-[#28221D]">
-            “I finally feel like I can slow down without losing momentum.”
-          </blockquote>
-          <div class="text-sm text-[#584D44]">— Amelia R.</div>
-        </div>
-
-        <div class="rounded-[1.75rem] border border-[#E9E1D4] bg-[#FCFAF6] p-4 h-[220px] flex flex-col">
-          <div class="text-[10px] uppercase tracking-[0.2em] text-[#647462] font-semibold mb-3">Instagram</div>
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Instagram testimonial" class="h-24 w-full object-cover rounded-xl mb-3">
-          <p class="text-sm text-[#584D44] leading-relaxed">“This community gave me a calmer rhythm and more creative confidence.”</p>
-        </div>
-
-        <div class="rounded-[1.75rem] border border-[#E9E1D4] bg-[#F4EFE6] p-5 h-[220px] flex flex-col justify-between">
-          <div class="text-[#647462] text-[10px] uppercase tracking-[0.2em] font-semibold">Text message</div>
-          <p class="font-serif-display text-2xl sm:text-3xl leading-[1.05] text-[#28221D]">
-            “I feel more at ease in my own life, and my creative work has opened up again.”
-          </p>
-          <div class="text-sm text-[#584D44]">— Sofia M.</div>
-        </div>
-
-        <div class="rounded-[1.75rem] border border-[#E9E1D4] bg-[#FCFAF6] p-4 h-[220px] flex flex-col">
-          <div class="text-[10px] uppercase tracking-[0.2em] text-[#647462] font-semibold mb-3">WhatsApp</div>
-          <div class="flex-1 rounded-xl bg-[#F3F0EA] p-3 text-sm text-[#584D44] leading-relaxed">
-            “The space has helped me feel less overwhelmed and more intentional in my daily routine.”
+      <div class="grid grid-cols-1 md:grid-cols-[0.65fr_1.35fr] overflow-hidden rounded-[2rem] bg-[#F3EEE6]">
+        <div class="flex items-center justify-center p-5 sm:p-6">
+          <div class="aspect-square w-full max-w-[260px] overflow-hidden rounded-full bg-[#E3DCCF] sm:max-w-[320px]">
+            <img src="media/facilitator-optimized.jpg" alt="Karnika, Emotional Wellness Facilitator" class="w-full h-full object-cover scale-[1.3]">
           </div>
         </div>
-
-        <div class="rounded-[1.75rem] border border-[#E9E1D4] bg-[#F4EFE6] p-5 h-[220px] flex flex-col justify-between">
-          <div class="text-[#647462] text-[10px] uppercase tracking-[0.2em] font-semibold">Community review</div>
-          <blockquote class="font-serif-display text-2xl sm:text-3xl leading-[1.05] text-[#28221D]">
-            “The sessions felt grounding, practical, and beautifully paced.”
-          </blockquote>
-          <div class="text-sm text-[#584D44]">— Lena S.</div>
+        <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12">
+          <h3 class="font-serif-display text-3xl sm:text-4xl text-[#28221D] mb-1">Karnika</h3>
+          <p class="text-xs uppercase tracking-[0.16em] font-semibold text-[#647462] mb-4">Emotional Wellness Facilitator</p>
+          <p class="text-sm text-[#584D44] leading-relaxed max-w-xl mb-5">I believe healing isn't about becoming someone new, but finding your way back to yourself. Over the past two years, my work with people has taught me to listen beyond the words, pay attention to the nuances of their emotions, and gently guide sessions towards a deeper understanding of what they're experiencing. Through Bach Flower Therapy, I bring this attentiveness into understanding each person's emotional needs and selecting remedies that are personalised to them. My intention is to create a space where you feel heard, understood, and supported in your journey towards a more authentic life.</p>
+          <a href="about-us.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F]">More about Inflow Living <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
         </div>
-
-        <div class="rounded-[1.75rem] border border-[#E9E1D4] bg-[#FCFAF6] p-4 h-[220px] flex flex-col">
-          <div class="text-[10px] uppercase tracking-[0.2em] text-[#647462] font-semibold mb-3">Google review</div>
-          <div class="rounded-xl bg-[#F7F4EF] p-3 text-sm text-[#584D44] leading-relaxed mb-3">
-            “A grounded, thoughtful space that helped me reconnect with my creative rhythm.”
-          </div>
-          <div class="mt-auto flex items-center justify-between text-xs text-[#6C5E53]">
-            <span>★★★★★</span>
-            <span>Rae W.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center">
-        <a href="testimonials.html" class="inline-flex items-center gap-2 bg-[#2E2620] text-[#F8F5EF] px-7 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-[#433830] transition">
-          View more
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="mt-20 pt-16 text-center">
-      <span class="text-xs font-semibold uppercase tracking-widest text-[#7C6E62]">Get In Touch</span>
-      <h2 class="font-serif-display text-3xl sm:text-4xl text-[#28221D] mt-2 mb-3">Begin a conversation</h2>
-      <p class="text-[#6C5E53] text-sm max-w-md mx-auto mb-6">Whether you are curious about our upcoming cohort or exploring a 1:1 session, feel free to drop an email.</p>
-      
-      <!-- REPLACE WITH YOUR EMAIL -->
-      <a href="mailto:hello@inflowliving.com" class="inline-flex items-center gap-2 text-[#28221D] font-serif-display text-2xl hover:text-[#647462] underline decoration-[#CAD4C7] underline-offset-6 transition-colors">
-        <i data-lucide="mail" class="w-5 h-5 text-[#647462]"></i>
-        hello@inflowliving.com
-      </a>
+    <section class="mt-16 sm:mt-24 rounded-[2rem] bg-[#E9EEE8] px-6 py-8 sm:px-10 sm:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <h2 class="font-serif-display text-3xl sm:text-4xl text-[#28221D] mb-2">Upcoming gatherings</h2>
+        <p class="text-sm text-[#584D44] leading-relaxed max-w-xl">No new dates are listed just yet. Check Instagram for the latest gathering updates.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F] px-4 py-3">Instagram <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+      </div>
     </section>
 
+    <section id="testimonials" class="mt-16 sm:mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-7">
+        <div>
+          <p class="text-xs uppercase tracking-[0.22em] text-[#647462] font-semibold mb-3">Kind words</p>
+          <h2 class="font-serif-display text-4xl sm:text-5xl text-[#28221D]">From the community</h2>
+        </div>
+        <a href="testimonials.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#52634F]">See more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <blockquote class="min-h-[190px] rounded-2xl bg-[#F3EEE6] p-5 flex flex-col justify-between"><p class="font-serif-display text-2xl leading-tight text-[#28221D]">“I finally feel like I can slow down without losing momentum.”</p><cite class="not-italic text-xs text-[#6C5E53] mt-5">Amelia R. / Member reflection</cite></blockquote>
+        <blockquote class="min-h-[190px] rounded-2xl bg-[#E9EEE8] p-5 flex flex-col justify-between"><p class="font-serif-display text-2xl leading-tight text-[#28221D]">“The sessions felt grounding, practical, and beautifully paced.”</p><cite class="not-italic text-xs text-[#6C5E53] mt-5">Lena S. / Community review</cite></blockquote>
+        <blockquote class="min-h-[190px] rounded-2xl bg-[#F4EAE5] p-5 flex flex-col justify-between"><p class="font-serif-display text-2xl leading-tight text-[#28221D]">“This community gave me a calmer rhythm and more creative confidence.”</p><cite class="not-italic text-xs text-[#6C5E53] mt-5">Member note</cite></blockquote>
+        <blockquote class="min-h-[190px] rounded-2xl bg-[#F1EFE8] p-5 flex flex-col justify-between"><p class="font-serif-display text-2xl leading-tight text-[#28221D]">“I feel more at ease in my own life, and my creative work has opened up again.”</p><cite class="not-italic text-xs text-[#6C5E53] mt-5">Sofia M. / 1:1 session</cite></blockquote>
+      </div>
+    </section>
   </main>
 
-  <!-- Minimal Editorial Footer -->
-  <footer class="max-w-4xl mx-auto w-full px-6 py-8 border-t border-[#E5DECF] text-xs text-[#8A7C6E] flex justify-between items-center">
-    <span>© 2026 Inflow Living</span>
+  <footer class="mt-8 bg-[#203F17] text-[#F8F5EF]">
+    <div class="max-w-6xl mx-auto px-6 py-10 sm:py-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+      <div>
+        <a href="index.html" class="font-serif-display text-3xl">Inflow Living</a>
+        <p class="mt-3 text-sm text-white/70">Bengaluru · Coimbatore</p>
+      </div>
+      <div>
+        <h2 class="text-xs uppercase tracking-[0.18em] font-semibold text-white/60 mb-3">Connect</h2>
+        <a href="mailto:inflow.livingg@gmail.com" class="block text-sm hover:text-white/70">inflow.livingg@gmail.com</a>
+        <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-2 text-sm hover:text-white/70">Instagram <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+      </div>
+      <div>
+        <h2 class="text-xs uppercase tracking-[0.18em] font-semibold text-white/60 mb-3">Listen</h2>
+        <a href="https://open.spotify.com/show/2hyAKtEvTIF4kAFTQ9ptL2" target="_blank" rel="noopener noreferrer" class="block text-sm hover:text-white/70">Your Voice on Spotify</a>
+      </div>
+      <div>
+        <h2 class="text-xs uppercase tracking-[0.18em] font-semibold text-white/60 mb-3">Quick Links</h2>
+        <nav aria-label="Quick links" class="grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
+          <a href="about-us.html" class="hover:text-white/70">About Us</a>
+          <a href="what-we-do.html" class="hover:text-white/70">What We Do</a>
+          <a href="upcoming-events.html" class="hover:text-white/70">Events</a>
+          <a href="testimonials.html" class="hover:text-white/70">Testimonials</a>
+          <a href="terms-and-conditions.html" class="hover:text-white/70">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 pb-6 text-xs text-white/45">© 2026 Inflow Living</div>
   </footer>
 
   <script>
     lucide.createIcons();
   </script>
+  <script src="media/site.js"></script>
 </body>
 </html>
